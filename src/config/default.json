@@ -1,0 +1,25 @@
+{
+	"peersApi": {
+		"defaultNode": "http://20.52.157.15:3000",
+		"nodes": [
+			"http://20.52.157.15:3000",
+			"http://20.52.233.206:3000"
+		]
+	},
+	"apiNodePort": 3000,
+	"endpoints": {
+		"marketData": "https://min-api.cryptocompare.com/",
+		"statisticsService": "",
+		"nodeRewardsController": "http://20.52.157.15:7890"
+	},
+	"networkConfig": {
+		"namespaceName": "twix.coin",
+		"mosaicId": "1963C9BACDD2CA5A",
+		"namespaceId": "FA3F8597BD381F74",
+		"divisibility": "6",
+		"networkIdentifier": 0
+	},
+	"footer": {
+		"link": []
+	}
+}
