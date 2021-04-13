@@ -13,11 +13,11 @@
 		"nodeRewardsController": "http://20.52.157.15:7890"
 	},
 	"networkConfig": {
-		"namespaceName": "twix.coin",
-		"mosaicId": "1963C9BACDD2CA5A",
-		"namespaceId": "FA3F8597BD381F74",
+		"namespaceName": "twix",
+		"mosaicId": "6C57A9BA893510BA",
+		"namespaceId": "DE979F65866DC017",
 		"divisibility": "6",
-		"networkIdentifier": 0
+		"networkIdentifier": 152
 	},
 	"footer": {
 		"link": []
