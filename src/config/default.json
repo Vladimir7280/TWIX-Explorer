@@ -1,16 +1,16 @@
 {
 	"peersApi": {
-		"defaultNode": "http://20.52.157.15:3000",
+		"defaultNode": "https://seednode1.twix.live",
 		"nodes": [
-			"http://20.52.157.15:3000",
-			"http://20.52.233.206:3000"
+			"https://seednode1.twix.live",
+			"https://seednode2.twix.live"
 		]
 	},
-	"apiNodePort": 3000,
+	"apiNodePort": 443,
 	"endpoints": {
-		"marketData": "https://min-api.cryptocompare.com/",
+		"marketData": "https://new.capital",
 		"statisticsService": "",
-		"nodeRewardsController": "http://20.52.157.15:7890"
+		"nodeRewardsController": "https://seednode1.twix.live"
 	},
 	"networkConfig": {
 		"namespaceName": "twix",
