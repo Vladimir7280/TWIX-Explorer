@@ -6,7 +6,7 @@
 			"https://seednode2.twix.live"
 		]
 	},
-	"apiNodePort": 443,
+	"apiNodePort": 3000,
 	"endpoints": {
 		"marketData": "https://new.capital",
 		"statisticsService": "",
