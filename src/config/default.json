@@ -1,22 +1,24 @@
 {
 	"peersApi": {
-		"defaultNode": "https://seednode1.twix.live",
+		"defaultNode": "http://95.217.7.18:3000",
 		"nodes": [
-			"https://seednode1.twix.live",
-			"https://seednode2.twix.live"
+			"http://95.217.7.18:3000",
+			"http://95.217.56.171:3000",
+			"http://159.223.3.85:3000",
+			"http://167.172.49.97:3000"
 		]
 	},
 	"apiNodePort": 3000,
 	"endpoints": {
 		"marketData": "https://new.capital",
 		"statisticsService": "",
-		"nodeRewardsController": "https://seednode1.twix.live"
+		"nodeRewardsController": "http://159.69.211.60"
 	},
 	"networkConfig": {
 		"namespaceName": "twix",
-		"mosaicId": "6C57A9BA893510BA",
+		"mosaicId": "553961D2F0B6A6A7",
 		"namespaceId": "DE979F65866DC017",
-		"divisibility": "6",
+		"divisibility": "4",
 		"networkIdentifier": 152
 	},
 	"footer": {
