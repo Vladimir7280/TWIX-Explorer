@@ -54,7 +54,7 @@ import AccountIcon from '../graphics/AccountIcon.vue';
 import KeyCircle from '../graphics/KeyCircle.vue';
 import KeyUnlinkCircle from '../graphics/KeyUnlinkCircle.vue';
 import Arrow from '../graphics/Arrow.vue';
-import { TransactionType } from 'symbol-sdk';
+import { TransactionType } from 'symbol-sdk-twix';
 
 export default {
 	extends: GraphicComponent,

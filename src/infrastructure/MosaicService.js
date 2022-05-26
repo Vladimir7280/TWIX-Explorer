@@ -18,7 +18,7 @@
 
 import http from './http';
 import helper from '../helper';
-import { Address, MosaicId, Order, ReceiptType, UInt64 } from 'symbol-sdk';
+import { Address, MosaicId, Order, ReceiptType, UInt64 } from 'symbol-sdk-twix';
 import { NamespaceService, MetadataService, ReceiptService } from '../infrastructure';
 import { Constants } from '../config';
 

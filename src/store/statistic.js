@@ -18,7 +18,7 @@
 
 import Lock from './lock';
 import { NetworkService, StatisticService, BlockService, NodeService } from '../infrastructure';
-import { Order } from 'symbol-sdk';
+import { Order } from 'symbol-sdk-twix';
 import {
 	DataSet,
 	getStateFromManagers,

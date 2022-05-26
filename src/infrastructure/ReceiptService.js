@@ -17,7 +17,7 @@
  */
 
 import http from './http';
-import { ReceiptType, ResolutionType } from 'symbol-sdk';
+import { ReceiptType, ResolutionType } from 'symbol-sdk-twix';
 import Constants from '../config/constants';
 import { take, toArray } from 'rxjs/operators';
 import {

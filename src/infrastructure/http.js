@@ -16,7 +16,7 @@
  *
  */
 
-import * as symbol from 'symbol-sdk';
+import * as symbol from 'symbol-sdk-twix';
 import { NamespaceService } from '../infrastructure';
 import globalConfig from '../config/globalConfig';
 

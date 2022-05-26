@@ -29,7 +29,7 @@
     "leaflet.markercluster": "^1.4.1",
     "merkletreejs": "^0.2.9",
     "moment-timezone": "^0.5.28",
-    "symbol-sdk": "^1.0.0",
+    "symbol-sdk-twix": "2.0.3",
     "url-parse": "^1.4.7",
     "utf8": "^3.0.0",
     "vue": "^2.6.11",

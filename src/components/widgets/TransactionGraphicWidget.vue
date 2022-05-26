@@ -50,7 +50,7 @@ import Card from '@/components/containers/Card.vue';
 import GraphicComponent from '../graphics/GraphicComponent.vue';
 import AccountIcon from '../graphics/AccountIcon.vue';
 import TransactionGraphic from '@/components/transaction-graphic/TransactionGraphic.vue';
-import { TransactionType } from 'symbol-sdk';
+import { TransactionType } from 'symbol-sdk-twix';
 
 export default {
 	extends: GraphicComponent,

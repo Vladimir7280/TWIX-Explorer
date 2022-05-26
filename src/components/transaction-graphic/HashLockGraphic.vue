@@ -45,7 +45,7 @@ import GraphicComponent from '../graphics/GraphicComponent.vue';
 import AccountIcon from '../graphics/AccountIcon.vue';
 import LockIcon from '../graphics/LockIcon.vue';
 import MosaicsCircle from '../graphics/MosaicsCircle.vue';
-import { TransactionType } from 'symbol-sdk';
+import { TransactionType } from 'symbol-sdk-twix';
 import Arrow from '../graphics/Arrow.vue';
 
 export default {

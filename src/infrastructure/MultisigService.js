@@ -17,7 +17,7 @@
  */
 
 import http from './http';
-import { Address } from 'symbol-sdk';
+import { Address } from 'symbol-sdk-twix';
 
 class MultisigService {
   /**

@@ -45,7 +45,7 @@ import GraphicComponent from '../graphics/GraphicComponent.vue';
 import AccountIcon from '../graphics/AccountIcon.vue';
 import RestrictionOperationCircle from '../graphics/RestrictionOperationCircle';
 import Arrow from '../graphics/Arrow.vue';
-import { TransactionType } from 'symbol-sdk';
+import { TransactionType } from 'symbol-sdk-twix';
 
 export default {
 	extends: GraphicComponent,

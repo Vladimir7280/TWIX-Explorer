@@ -18,7 +18,7 @@
 
 import http from './http';
 import Constants from '../config/constants';
-import * as symbol from 'symbol-sdk';
+import * as symbol from 'symbol-sdk-twix';
 import Axios from 'axios';
 import moment from 'moment';
 import helper from '../helper';

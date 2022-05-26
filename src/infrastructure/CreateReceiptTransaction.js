@@ -1,6 +1,6 @@
 import Constants from '../config/constants';
 import helper from '../helper';
-import { Mosaic, ReceiptType } from 'symbol-sdk';
+import { Mosaic, ReceiptType } from 'symbol-sdk-twix';
 
 class CreateReceiptTransaction {
     static balanceChangeReceipt = async (transactionStatement) => {

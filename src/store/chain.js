@@ -18,7 +18,7 @@
 
 import Lock from './lock';
 import { NodeService, ChainService } from '../infrastructure';
-import { RoleType } from 'symbol-sdk';
+import { RoleType } from 'symbol-sdk-twix';
 
 const LOCK = Lock.create();
 

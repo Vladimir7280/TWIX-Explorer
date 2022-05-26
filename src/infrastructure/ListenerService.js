@@ -16,7 +16,7 @@
  *
  */
 
-import { Listener } from 'symbol-sdk';
+import { Listener } from 'symbol-sdk-twix';
 import http from './http';
 class ListenerService {
   /**

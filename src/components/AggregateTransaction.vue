@@ -25,7 +25,7 @@
 <script>
 import TableInfoView from '@/components/tables/TableInfoView.vue';
 import TableView from '@/components/tables/TableView.vue';
-import { TransactionType } from 'symbol-sdk';
+import { TransactionType } from 'symbol-sdk-twix';
 
 export default {
 	extends: TableView,
