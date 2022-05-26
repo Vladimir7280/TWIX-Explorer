@@ -93,6 +93,10 @@ export default {
 				'fee',
 				'relativeAmount',
 				'feeMultiplier',
+                "collectedEpochFees",
+                "feeToPay",
+                "totalSupply",
+                "inflation",
 				'difficulty',
 				'balance'
 			],
