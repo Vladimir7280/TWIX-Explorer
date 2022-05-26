@@ -247,7 +247,7 @@ export const metadata = [
 		}
 	},
 	{
-    label: 'Token Alias',
+	    label: 'Token Alias',
 		icon: 'mdi-circle',
 		value: {
 			metadataType: MetadataType.Mosaic
@@ -264,14 +264,14 @@ export const metadata = [
 
 export const mosaicRestriction = [
 	{
-    label: 'Token Global Restriction',
+	    label: 'Token Global Restriction',
 		icon: 'mdi-alert',
 		value: {
 			entryType: MosaicRestrictionEntryType.GLOBAL
 		}
 	},
 	{
-    label: 'Token Address Restriction',
+	    label: 'Token Address Restriction',
 		icon: 'mdi-account',
 		value: {
 			entryType: MosaicRestrictionEntryType.ADDRESS

@@ -41,8 +41,8 @@ class Constants {
 		[TransactionType.NAMESPACE_REGISTRATION]: 'Namespace Registration',
 		[TransactionType.ADDRESS_ALIAS]: 'Address Alias',
 		[TransactionType.MOSAIC_ALIAS]: 'Token Alias',
-    [TransactionType.MOSAIC_DEFINITION]: 'Token Definition',
-    [TransactionType.MOSAIC_SUPPLY_CHANGE]: 'Token Supply Change',
+	    [TransactionType.MOSAIC_DEFINITION]: 'Token Definition',
+	    [TransactionType.MOSAIC_SUPPLY_CHANGE]: 'Token Supply Change',
 		[TransactionType.MULTISIG_ACCOUNT_MODIFICATION]: 'Multisig Account Modification',
 		[TransactionType.AGGREGATE_COMPLETE]: 'Aggregate Complete',
 		[TransactionType.AGGREGATE_BONDED]: 'Aggregate Bonded',
@@ -50,13 +50,13 @@ class Constants {
 		[TransactionType.SECRET_LOCK]: 'Secret Lock',
 		[TransactionType.SECRET_PROOF]: 'Secret Proof',
 		[TransactionType.ACCOUNT_ADDRESS_RESTRICTION]: 'Account Address Restriction',
-    [TransactionType.ACCOUNT_MOSAIC_RESTRICTION]: 'Account Token Restriction',
+	    [TransactionType.ACCOUNT_MOSAIC_RESTRICTION]: 'Account Token Restriction',
 		[TransactionType.ACCOUNT_OPERATION_RESTRICTION]: 'Account Operation Restriction',
 		[TransactionType.ACCOUNT_KEY_LINK]: 'Account Key Link',
-    [TransactionType.MOSAIC_ADDRESS_RESTRICTION]: 'Token Address Restriction',
-    [TransactionType.MOSAIC_GLOBAL_RESTRICTION]: 'Token Global Restriction',
+	    [TransactionType.MOSAIC_ADDRESS_RESTRICTION]: 'Token Address Restriction',
+	    [TransactionType.MOSAIC_GLOBAL_RESTRICTION]: 'Token Global Restriction',
 		[TransactionType.ACCOUNT_METADATA]: 'Account Metadata',
-    [TransactionType.MOSAIC_METADATA]: 'Token Metadata',
+	    [TransactionType.MOSAIC_METADATA]: 'Token Metadata',
 		[TransactionType.NAMESPACE_METADATA]: 'Namespace Metadata',
 		[TransactionType.VRF_KEY_LINK]: 'VRF Key Link',
 		[TransactionType.VOTING_KEY_LINK]: 'Voting Key Link',
@@ -106,7 +106,7 @@ class Constants {
 
 	static MetadataType = {
 		[MetadataType.Account]: 'Account',
-    [MetadataType.Mosaic]: 'Token',
+	    [MetadataType.Mosaic]: 'Token',
 		[MetadataType.Namespace]: 'Namespace'
 	}
 
@@ -118,8 +118,8 @@ class Constants {
 		[ReceiptType.LockSecret_Created]: 'LockSecret Created',
 		[ReceiptType.LockSecret_Completed]: 'LockSecret Completed',
 		[ReceiptType.LockSecret_Expired]: 'LockSecret Expired',
-    [ReceiptType.Mosaic_Levy]: 'Token Levy',
-    [ReceiptType.Mosaic_Rental_Fee]: 'Token Rental Fee',
+	    [ReceiptType.Mosaic_Levy]: 'Token Levy',
+	    [ReceiptType.Mosaic_Rental_Fee]: 'Token Rental Fee',
 		[ReceiptType.Namespace_Rental_Fee]: 'Namespace Rental Fee',
 		[ReceiptType.Mosaic_Expired]: 'Token Expired',
 		[ReceiptType.Namespace_Expired]: 'Namespace Expired',
@@ -129,7 +129,7 @@ class Constants {
 
 	static ResolutionType = {
 		[ResolutionType.Address]: 'Address',
-    [ResolutionType.Mosaic]: 'Token'
+	    [ResolutionType.Mosaic]: 'Token'
 	}
 
 	static NetworkType = {
@@ -157,8 +157,8 @@ class Constants {
 	}
 
 	static MosaicRestrictionFlag = {
-    [MosaicRestrictionFlag.AllowMosaic]: 'Allow Tokens',
-    [MosaicRestrictionFlag.BlockMosaic]: 'Block Tokens'
+	    [MosaicRestrictionFlag.AllowMosaic]: 'Allow Tokens',
+	    [MosaicRestrictionFlag.BlockMosaic]: 'Block Tokens'
 	}
 
 	static OperationRestrictionFlag = {
@@ -167,8 +167,8 @@ class Constants {
 	}
 
 	static MosaicRestrictionEntryType = {
-    [MosaicRestrictionEntryType.ADDRESS]: 'Token address restriction',
-    [MosaicRestrictionEntryType.GLOBAL]: 'Token global restriction'
+	    [MosaicRestrictionEntryType.ADDRESS]: 'Token address restriction',
+	    [MosaicRestrictionEntryType.GLOBAL]: 'Token global restriction'
 	}
 
 	static MosaicRestrictionType = {
