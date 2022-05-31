@@ -240,7 +240,7 @@ class NodeService {
     		chainInfo.finalizedHash = nodeChainInfo.latestFinalizedBlock.hash;
     	}
     	catch (e) {
-    		console.error('Failed  to get node chain info', e);
+    		console.error('Failed to get node chain info', e);
     	};
 
     	return chainInfo;
