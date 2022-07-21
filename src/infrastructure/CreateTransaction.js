@@ -126,9 +126,9 @@ class CreateTransaction {
     		...transactionObj,
     		transactionBody: {
     			transactionType: transactionObj.type,
-    			blockHeight: transactionBody.blockHeight.compact(),
-				highPrice: transactionBody.highPrice.compact(),
-				lowPrice: transactionBody.lowPrice.compact()
+    			blockHeight: transactionObj.blockHeight.compact(),
+				highPrice: transactionObj.highPrice.compact(),
+				lowPrice: transactionObj.lowPrice.compact()
     		}
     	};
     };
