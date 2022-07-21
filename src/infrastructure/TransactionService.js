@@ -312,6 +312,14 @@ class TransactionService {
   			action: Constants.MosaicSupplyChangeAction[transactionBody.action],
   			delta: transactionBody.delta.compact()
   		};
+	
+	case TransactionType.PRICE:
+  		return {
+  			transactionType: transactionBody.type,
+			blockHeight: transactionBody.blockHeight.compact(),
+			highPrice: transactionBody.highPrice.compact(),
+			lowPrice: transactionBody.lowPrice.compact()
+  		};
 
   	case TransactionType.MULTISIG_ACCOUNT_MODIFICATION:
   		return {
@@ -536,6 +544,12 @@ class TransactionService {
 		  return [
   			{ action: transactionBody.action }
 		  ];
+	case TransactionType.PRICE:
+		  return [
+			{blockHeight: transactionBody.blockHeight},
+			{highPrice: transactionBody.highPrice},
+			{lowPrice: transactionBody.lowPrice}
+		  ];
   	case TransactionType.MULTISIG_ACCOUNT_MODIFICATION:
 		  return [
 			  { minApprovalDelta: transactionBody.minApprovalDelta },
@@ -622,6 +636,8 @@ class TransactionService {
   		return CreateTransaction.mosaicDefinition(transactionObj);
   	case TransactionType.MOSAIC_SUPPLY_CHANGE:
   		return CreateTransaction.mosaicSupplyChange(transactionObj);
+	case TransactionType.PRICE:
+		return CreateTransaction.priceTransaction(transactionObj);
   	case TransactionType.MULTISIG_ACCOUNT_MODIFICATION:
   		return CreateTransaction.multisigAccountModification(transactionObj);
   	case TransactionType.HASH_LOCK:

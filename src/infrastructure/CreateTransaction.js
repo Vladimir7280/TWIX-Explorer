@@ -120,6 +120,19 @@ class CreateTransaction {
     	};
     };
 
+	static priceTransaction = async (transactionObj) => {
+
+    	return {
+    		...transactionObj,
+    		transactionBody: {
+    			transactionType: transactionObj.type,
+    			blockHeight: transactionBody.blockHeight.compact(),
+				highPrice: transactionBody.highPrice.compact(),
+				lowPrice: transactionBody.lowPrice.compact()
+    		}
+    	};
+    };
+
     static multisigAccountModification = async (transactionObj) => {
     	const [addressAdditions, addressDeletions] = await Promise.all([
     		Promise.all(transactionObj.addressAdditions.map(address => {
