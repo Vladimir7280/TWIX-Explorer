@@ -214,6 +214,7 @@
   "supplementalKeys": "Supplemental Keys",
   "expirationDuration": "Expiration",
   "transactionDescriptor_16724": "Transfer",
+  "transactionDescriptor_16726": "Price",
   "transactionDescriptor_16718": "Namespace registration",
   "transactionDescriptor_16974": "Address alias",
   "transactionDescriptor_17230": "Token alias",

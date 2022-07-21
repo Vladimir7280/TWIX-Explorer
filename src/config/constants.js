@@ -43,6 +43,7 @@ class Constants {
 		[TransactionType.MOSAIC_ALIAS]: 'Token Alias',
 	    [TransactionType.MOSAIC_DEFINITION]: 'Token Definition',
 	    [TransactionType.MOSAIC_SUPPLY_CHANGE]: 'Token Supply Change',
+		[TransactionType.PRICE]: 'Price Transaction',
 		[TransactionType.MULTISIG_ACCOUNT_MODIFICATION]: 'Multisig Account Modification',
 		[TransactionType.AGGREGATE_COMPLETE]: 'Aggregate Complete',
 		[TransactionType.AGGREGATE_BONDED]: 'Aggregate Bonded',

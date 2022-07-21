@@ -70,6 +70,11 @@ export const transaction = [
 		value: { type: [TransactionType.TRANSFER] }
 	},
 	{
+		label: 'Price',
+		icon: 'mdi-swap-vertical',
+		value: { type: [TransactionType.PRICE] }
+	},
+	{
 		label: 'Account',
 		icon: 'mdi-account',
 		value: {
