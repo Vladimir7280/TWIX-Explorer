@@ -97,6 +97,7 @@ export default {
 				'feeToPay',
 				'totalSupply',
 				'inflation',
+				'inflationMultiplier',
 				'difficulty',
 				'balance'
 			],

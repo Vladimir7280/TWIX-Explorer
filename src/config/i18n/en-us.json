@@ -98,6 +98,7 @@
   "feeToPay": "Fee To Pay",
   "totalSupply": "Total Supply",
   "inflation": "Inflation",
+  "inflationMultiplier": "inflationMultiplier",
   "blockchainExplorerTitle": "TWIX blockchain explorer",
   "searchBoxTitle": "Search transactions, addresses, namespaces & tokens on the TWIX network.",
   "searchBoxPlaceholder": "Search block / tx hash / account address / token id / namespace id",
