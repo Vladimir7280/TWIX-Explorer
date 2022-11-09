@@ -300,7 +300,7 @@ class BlockService {
 	feeToPay: helper.toNetworkCurrency(block.feeToPay),
 	totalSupply: helper.toNetworkCurrency(block.totalSupply),
 	inflation: helper.toNetworkCurrency(block.inflation),
-	inflationMultiplier: block.inflationMultiplier.compact(),
+	inflationMultiplier: (block.inflationMultiplier.compact() / 100000).toString(),
   	totalTransactions: block.totalTransactionsCount,
   	statements: block.statementsCount,
   	transactions: block.transactionsCount,
