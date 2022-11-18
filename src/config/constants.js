@@ -18,7 +18,7 @@ import {
 	MosaicRestrictionType,
 	LockStatus,
 	BlockType
-} from 'symbol-sdk-twix';
+} from 'twix-sdk';
 
 class Constants {
 	static PageSize = 25

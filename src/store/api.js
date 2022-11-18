@@ -21,7 +21,7 @@ import helper from '../helper';
 import http from '../infrastructure/http';
 import { NodeService } from '../infrastructure';
 import globalConfig from '../config/globalConfig';
-import * as sdk from 'symbol-sdk-twix';
+import * as sdk from 'twix-sdk';
 
 const LOCK = Lock.create();
 

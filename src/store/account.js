@@ -32,7 +32,7 @@ import {
 	getMutationsFromManagers,
 	getActionsFromManagers
 } from './manager';
-import { Address } from 'symbol-sdk-twix';
+import { Address } from 'twix-sdk';
 
 const managers = [
 	new Pagination({

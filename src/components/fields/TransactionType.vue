@@ -21,7 +21,7 @@ import IconRestriction from '../../styles/img/tx-restriction.png';
 import IconMultisig from '../../styles/img/tx-multisig.png';
 import IconMetadata from '../../styles/img/tx-metadata.png';
 import IconLink from '../../styles/img/tx-account-link.png';
-import { TransactionType } from 'symbol-sdk-twix';
+import { TransactionType } from 'twix-sdk';
 
 export default {
 	props: {

@@ -20,7 +20,7 @@ import http from './http';
 import helper from '../helper';
 import { Constants } from '../config';
 import { NamespaceService } from '../infrastructure';
-import { Address, Mosaic, MosaicId } from 'symbol-sdk-twix';
+import { Address, Mosaic, MosaicId } from 'twix-sdk';
 
 class CreateTransaction {
     static transferTransaction = async (transactionObj) => {

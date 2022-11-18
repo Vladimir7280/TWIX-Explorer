@@ -30,7 +30,7 @@ import {
 	TransactionService,
 	Deadline,
 	UInt64
-} from 'symbol-sdk-twix';
+} from 'twix-sdk';
 import http from './http';
 import helper from '../helper';
 import globalConfig from '../config/globalConfig';

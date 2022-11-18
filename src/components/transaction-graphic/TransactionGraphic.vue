@@ -28,7 +28,7 @@ import AccountOperationRestrictionGraphic from '@/components/transaction-graphic
 import AccountAddressRestrictionGraphic from '@/components/transaction-graphic/AccountAddressRestrictionGraphic.vue';
 import AccountMosaicRestrictionGraphic from '@/components/transaction-graphic/AccountMosaicRestrictionGraphic.vue';
 import MultisigAccountModificationGraphic from '@/components/transaction-graphic/MultisigAccountModificationGraphic.vue';
-import { TransactionType } from 'symbol-sdk-twix';
+import { TransactionType } from 'twix-sdk';
 
 export default {
 	props: {

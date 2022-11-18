@@ -24,7 +24,7 @@ import {
 	Address,
 	Mosaic,
 	NodeVersion
-} from 'symbol-sdk-twix';
+} from 'twix-sdk';
 import { NamespaceService, MosaicService } from './infrastructure';
 import http from './infrastructure/http';
 import moment from 'moment';

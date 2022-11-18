@@ -16,7 +16,7 @@
  *
  */
 
-import { UInt64, TransactionGroup, Order, BlockOrderBy, BlockType } from 'symbol-sdk-twix';
+import { UInt64, TransactionGroup, Order, BlockOrderBy, BlockType } from 'twix-sdk';
 import { TransactionService, ReceiptService } from '../infrastructure';
 import http from './http';
 import helper from '../helper';

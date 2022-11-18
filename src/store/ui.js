@@ -16,7 +16,7 @@
  *
  */
 import router from '../router';
-import { Address, AccountHttp } from 'symbol-sdk-twix';
+import { Address, AccountHttp } from 'twix-sdk';
 import { i18n, keyRedirects } from '../config';
 import { NamespaceService, MosaicService } from '../infrastructure';
 import Vue from 'vue';

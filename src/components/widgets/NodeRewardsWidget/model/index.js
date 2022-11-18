@@ -1,6 +1,6 @@
 import { omit } from '../utils';
 import helper from '../../../../helper';
-import { NodeVersion } from 'symbol-sdk-twix';
+import { NodeVersion } from 'twix-sdk';
 
 const formatDetails = details => {
 	return omit(['roundOk', 'id', 'nodeId'], details);

@@ -20,7 +20,7 @@ import http from './http';
 import helper from '../helper';
 import Constants from '../config/constants';
 import { ChainService, MetadataService, ReceiptService } from '../infrastructure';
-import { Order, NamespaceId, UInt64, ReceiptType, Address } from 'symbol-sdk-twix';
+import { Order, NamespaceId, UInt64, ReceiptType, Address } from 'twix-sdk';
 import globalConfig from '../config/globalConfig';
 
 class NamespaceService {

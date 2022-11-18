@@ -40,7 +40,7 @@ import ExtendAccountOperationRestrictionValue from '@/components/extend-graphic-
 import ExtendAccountMosaicRestrictionValue from '@/components/extend-graphic-value/ExtendAccountMosaicRestrictionValue.vue';
 import ExtendAccountAddressRestrictionValue from '@/components/extend-graphic-value/ExtendAccountAddressRestrictionValue.vue';
 import ExtendMosaicGlobalRestrictionValue from '@/components/extend-graphic-value/ExtendMosaicGlobalRestrictionValue.vue';
-import { TransactionType } from 'symbol-sdk-twix';
+import { TransactionType } from 'twix-sdk';
 export default {
 	extends: GraphicComponent,
 

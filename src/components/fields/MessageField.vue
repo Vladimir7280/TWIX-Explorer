@@ -36,7 +36,7 @@
 
 <script>
 import TableView from '@/components/tables/TableView.vue';
-import { MessageType } from 'symbol-sdk-twix';
+import { MessageType } from 'twix-sdk';
 
 export default {
 	name: 'MessageField',

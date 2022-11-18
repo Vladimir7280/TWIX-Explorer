@@ -45,7 +45,7 @@ import GraphicComponent from '../graphics/GraphicComponent.vue';
 import AccountIcon from '../graphics/AccountIcon.vue';
 import MetadataCircle from '../graphics/MetadataCircle.vue';
 import Arrow from '../graphics/Arrow.vue';
-import { TransactionType } from 'symbol-sdk-twix';
+import { TransactionType } from 'twix-sdk';
 
 export default {
 	extends: GraphicComponent,

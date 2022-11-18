@@ -8,7 +8,7 @@ import {
 	MetadataType,
 	MosaicRestrictionEntryType,
 	ReceiptType
-} from 'symbol-sdk-twix';
+} from 'twix-sdk';
 import http from '../infrastructure/http';
 import Constants from '../config/constants';
 

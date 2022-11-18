@@ -25,7 +25,7 @@ import {
 	Order,
 	UInt64,
 	Mosaic
-} from 'symbol-sdk-twix';
+} from 'twix-sdk';
 import Constants from '../config/constants';
 import http from './http';
 import helper from '../helper';

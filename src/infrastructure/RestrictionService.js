@@ -8,7 +8,7 @@ import {
 	MosaicGlobalRestriction,
 	MosaicRestrictionEntryType,
 	Order
-} from 'symbol-sdk-twix';
+} from 'twix-sdk';
 import helper from '../helper';
 import Constants from '../config/constants';
 

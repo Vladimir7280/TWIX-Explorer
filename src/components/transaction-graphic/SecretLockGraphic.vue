@@ -53,7 +53,7 @@ import AccountIcon from '../graphics/AccountIcon.vue';
 import MosaicsCircle from '../graphics/MosaicsCircle.vue';
 import LockCircle from '../graphics/LockCircle.vue';
 import Arrow from '../graphics/Arrow.vue';
-import { TransactionType } from 'symbol-sdk-twix';
+import { TransactionType } from 'twix-sdk';
 
 export default {
 	extends: GraphicComponent,
