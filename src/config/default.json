@@ -1,14 +1,15 @@
 {
 	"peersApi": {
-		"defaultNode": "http://95.217.7.18:3000",
+		"defaultNode": "https://seed1.twix.live:3001",
 		"nodes": [
-			"http://95.217.7.18:3000",
-			"http://95.217.56.171:3000",
-			"http://159.223.3.85:3000",
-			"http://167.172.49.97:3000"
+			"https://seed1.twix.live:3001",
+			"https://seed2.twix.live:3001",
+			"https://seed3.twix.live:3001",
+			"https://seed4.twix.live:3001",
+			"https://seed5.twix.live:3001"
 		]
 	},
-	"apiNodePort": 3000,
+	"apiNodePort": 3001,
 	"endpoints": {
 		"marketData": "https://new.capital",
 		"statisticsService": "",
