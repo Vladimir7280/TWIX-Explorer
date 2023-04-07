@@ -146,6 +146,11 @@ class NodeService {
                 				finalizationHeight: el.apiStatus.finalizationHeight,
                 				lastStatusCheck: el.apiStatus.lastStatusCheck
                 			};
+							node['softwareVersion'] = {
+								...node.softwareVersion,
+								restVersion: el.apiStatus.restVersion,
+								isHttpsEnabled: el.apiStatus.restVersion
+							};
                 		}
                 		else
                 			node['chainInfo'] = {};
@@ -162,7 +167,7 @@ class NodeService {
 
 	static getNodeStats = async () => {
 		if (globalConfig.endpoints.statisticsService && globalConfig.endpoints.statisticsService.length)
-			return (await Axios.get(globalConfig.endpoints.statisticsService + '/nodestats/')).data;
+			return (await Axios.get(globalConfig.endpoints.statisticsService + '/nodesStats/')).data;
 		else
 			throw Error('Statistics service endpoint is not provided');
 	}
@@ -280,14 +285,14 @@ class NodeService {
 
 	static getNodeStats = async () => {
 		if (globalConfig.endpoints.statisticsService && globalConfig.endpoints.statisticsService.length)
-			return (await Axios.get(globalConfig.endpoints.statisticsService + '/nodeStats')).data;
+			return (await Axios.get(globalConfig.endpoints.statisticsService + '/nodesStats')).data;
 		else
 			throw Error('Statistics service endpoint is not provided');
 	}
 
 	static getNodeHeightStats = async () => {
 		if (globalConfig.endpoints.statisticsService && globalConfig.endpoints.statisticsService.length) {
-			const data = (await Axios.get(globalConfig.endpoints.statisticsService + '/nodeHeightStats')).data;
+			const data = (await Axios.get(globalConfig.endpoints.statisticsService + '/nodesHeightStats')).data;
 
 			return [
 				{

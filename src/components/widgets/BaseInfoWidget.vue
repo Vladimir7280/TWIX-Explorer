@@ -92,6 +92,7 @@ export default {
 		},
 
 		finalizedHeight() {
+			console.log('TESTTEST', this.chainInfo);
 			return this.chainInfo.finalizedBlockHeight;
 		},
 
