@@ -201,7 +201,7 @@ export default {
 
 @media (max-width: 760px) {
     .ex-item {
-        border-left: 4px solid #904d9c;
+        border-left: 4px solid #020f45;
         padding: 1px 10px;
         margin-bottom: 15px;
         max-width: 150px;
@@ -209,7 +209,7 @@ export default {
 }
 
 .ex-item {
-    border-left: 4px solid #904d9c;
+    border-left: 4px solid #020f45;
     padding: 1px 10px;
     margin-bottom: 15px;
 }
