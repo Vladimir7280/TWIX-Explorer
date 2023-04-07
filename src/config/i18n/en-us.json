@@ -392,5 +392,6 @@
   "viewMoreStatistics": "View More Statistics",
   "nodeCountChartTitle": "Node count over time",
   "softwareVersion": "Version",
-  "isHttpsEnabled": "Https"
+  "isHttpsEnabled": "Https",
+  "restVersion": "REST Version"
 }
