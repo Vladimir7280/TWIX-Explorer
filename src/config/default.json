@@ -12,7 +12,7 @@
 	"apiNodePort": 3001,
 	"endpoints": {
 		"marketData": "https://new.capital",
-		"statisticsService": "",
+		"statisticsService": "https://s.twix.live",
 		"nodeRewardsController": "http://159.69.211.60"
 	},
 	"networkConfig": {

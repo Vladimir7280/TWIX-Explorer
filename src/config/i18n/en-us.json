@@ -391,5 +391,6 @@
   "nodeFinalizedHeightStatsTitle": "Count of nodes by finalized height",
   "viewMoreStatistics": "View More Statistics",
   "nodeCountChartTitle": "Node count over time",
-  "softwareVersion": "Version"
+  "softwareVersion": "Version",
+  "isHttpsEnabled": "Https"
 }

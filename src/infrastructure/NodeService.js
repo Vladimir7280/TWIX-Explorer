@@ -147,9 +147,9 @@ class NodeService {
                 				lastStatusCheck: el.apiStatus.lastStatusCheck
                 			};
 							node['softwareVersion'] = {
-								...node.softwareVersion,
+								version: node.version,
 								restVersion: el.apiStatus.restVersion,
-								isHttpsEnabled: el.apiStatus.restVersion
+								isHttpsEnabled: el.apiStatus.isHttpsEnabled
 							};
                 		}
                 		else
