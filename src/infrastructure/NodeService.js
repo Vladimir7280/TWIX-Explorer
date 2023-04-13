@@ -140,7 +140,7 @@ class NodeService {
                 			...el
                 		};
 
-                		if (el.apiStatus) {
+                		if (el.apiStatus.isAvailable) {
                 			node['chainInfo'] = {
                 				chainHeight: el.apiStatus.chainHeight,
                 				finalizationHeight: el.apiStatus.finalization.height,
