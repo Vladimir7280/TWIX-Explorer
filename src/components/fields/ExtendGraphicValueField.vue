@@ -53,7 +53,7 @@ export default {
 			default: () => []
 		},
 		transactionType: {
-			type: Number,
+			type: [Number, String],
 			required: true
 		}
 	},
