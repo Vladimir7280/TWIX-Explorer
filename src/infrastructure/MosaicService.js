@@ -21,6 +21,7 @@ import helper from '../helper';
 import { Address, MosaicId, Order, ReceiptType, UInt64 } from 'twix-sdk';
 import { NamespaceService, MetadataService, ReceiptService } from '../infrastructure';
 import { Constants } from '../config';
+import defaultConfig from '../config/default.json'
 
 class MosaicService {
 	/**
@@ -92,11 +93,14 @@ class MosaicService {
 
    	const expiredInBlock = mosaicInfo.duration + mosaicInfo.startHeight;
 
-   	return {
-   		...mosaicInfo,
-   		mosaicAliasNames: this.extractMosaicNamespace(mosaicInfo, mosaicNames),
-   		expiredInBlock: expiredInBlock === mosaicInfo.startHeight ? Constants.Message.INFINITY : expiredInBlock
-   	};
+	const mosaicLogo = await this.getMosaicMetadataLogo(mosaicId.toHex());
+
+	   return {
+		   ...mosaicInfo,
+		   mosaicAliasNames: this.extractMosaicNamespace(mosaicInfo, mosaicNames),
+		   expiredInBlock: expiredInBlock === mosaicInfo.startHeight ? Constants.Message.INFINITY : expiredInBlock,
+		   mosaicLogo: mosaicLogo
+	   };
    }
 
    /**
@@ -118,14 +122,17 @@ class MosaicService {
 
    	const mosaicNames = await NamespaceService.getMosaicsNames(mosaicIdsList);
 
-   	return {
-   		...mosaicInfos,
-   		data: mosaicInfos.data.map(mosaic => ({
-   			...mosaic,
-   			ownerAddress: mosaic.address,
-   			mosaicAliasNames: this.extractMosaicNamespace(mosaic, mosaicNames)
-   		}))
-   	};
+	const mosaicLogos = await Promise.all(mosaicInfos.data.map(async mosaicInfo => await this.getMosaicMetadataLogo(mosaicInfo.mosaicId)));
+
+	   return {
+		   ...mosaicInfos,
+		   data: mosaicInfos.data.map(mosaic => ({
+			   ...mosaic,
+			   ownerAddress: mosaic.address,
+			   mosaicAliasNames: this.extractMosaicNamespace(mosaic, mosaicNames),
+			   mosaicLogo: this.extractMosaicLogos(mosaic, mosaicLogos),
+		   }))
+	   };
    }
 
    /**
@@ -138,11 +145,13 @@ class MosaicService {
 
    	const mosaicIdsList = mosaicAmountViewInfos.map(mosaicAmountViewInfo => new MosaicId(mosaicAmountViewInfo.mosaicId));
    	const mosaicNames = await NamespaceService.getMosaicsNames(mosaicIdsList);
+	const mosaicLogos = await Promise.all(mosaicAmountViewInfos.map(async mosaicAmountViewInfo => await this.getMosaicMetadataLogo(mosaicAmountViewInfo.mosaicId)));
 
-   	return mosaicAmountViewInfos.map(mosaicAmountViewInfo => ({
-   		...mosaicAmountViewInfo,
-   		mosaicAliasNames: this.extractMosaicNamespace(mosaicAmountViewInfo, mosaicNames)
-   	}));
+	   return mosaicAmountViewInfos.map(mosaicAmountViewInfo => ({
+		   ...mosaicAmountViewInfo,
+		   mosaicAliasNames: this.extractMosaicNamespace(mosaicAmountViewInfo, mosaicNames),
+		   mosaicLogo: this.extractMosaicLogos(mosaicAmountViewInfo, mosaicLogos)
+	   }));
    }
 
    /**
@@ -168,6 +177,27 @@ class MosaicService {
 
    	return mosaicMetadatas;
    }
+
+   /**
+   * Gets mosaic Metadata Logo dataset into Vue component
+   * @param hexOrNamespace - hex value or namespace name
+   * @returns formatted mosaic Metadata Logo
+   */
+   static getMosaicMetadataLogo = async (hexOrNamespace) => {
+	const mosaicId = await helper.hexOrNamespaceToId(hexOrNamespace, 'mosaic');
+
+	const searchCriteria = {
+		scopedMetadataKey: defaultConfig.metadataSchema.tokenIconImage,
+		targetId: mosaicId,
+	};
+
+	const mosaicMetadataLogo = await MetadataService.searchMetadatas(searchCriteria);
+	const mosaicMetadataLogos = {
+		mosaicId: mosaicId.toHex(),
+		mosaicLogo: mosaicMetadataLogo.data.length? mosaicMetadataLogo.data[0].value : 'N/A'
+	}
+	return mosaicMetadataLogos;
+}
 
    /**
 	* Gets mosaic balance transfer receipt list dataset into Vue component
@@ -276,6 +306,7 @@ class MosaicService {
     * @returns mosaicNames
     */
    static extractMosaicNamespace = (mosaicInfo, mosaicNames) => {
+
    	const mosaicName = mosaicNames.find((name) => name.mosaicId === mosaicInfo.mosaicId);
 
    	const aliasNames = mosaicName.names.map(names => names.name);
@@ -283,6 +314,19 @@ class MosaicService {
    	const names = aliasNames.length > 0 ? aliasNames : [Constants.Message.UNAVAILABLE];
 
    	return names;
+   }
+
+   /**
+    * Extract Logo for Mosaic
+    * @param mosaicInfo - mosaicInfo DTO
+    * @param mosaicLogos - MosaicLogos[]
+    * @returns mosaicLogo
+    */
+   static extractMosaicLogos = (mosaicInfo, mosaicLogos) => {
+
+   	const mosaicLogo = mosaicLogos.find((name) => name.mosaicId === mosaicInfo.mosaicId);
+
+   	return mosaicLogo;
    }
 }
 

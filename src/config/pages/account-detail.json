@@ -65,6 +65,7 @@
 				"onRowClickKey": "mosaicId",
 				"fields": [
 					"mosaicId",
+					"mosaicLogo",
 					"amount",
 					"mosaicAliasNames"
 				]

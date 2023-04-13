@@ -87,7 +87,10 @@ export default {
 				'mosaicArtifactId',
 				'nodePublicKey'
 			],
-			disableClickValues: [...Object.values(Constants.Message)],
+			disableClickValues: [
+				...Object.values(Constants.Message),
+				'mosaicLogo'
+			],
 			changeDecimalColor: [
 				'amount',
 				'fee',
@@ -170,6 +173,10 @@ export default {
 
 		isTransactionType(itemKey) {
 			return itemKey === 'transactionType' || itemKey === 'restrictionOperationAdditions_' || itemKey === 'restrictionOperationDeletions_';
+		},
+
+		isMosaicLogo(itemKey) {
+			return itemKey === 'mosaicLogo';
 		},
 
 		isBlockHeightWithFinalizedStatus(itemKey) {

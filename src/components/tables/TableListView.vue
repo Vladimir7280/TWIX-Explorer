@@ -33,6 +33,7 @@
 							<Decimal v-else-if="isDecimal(itemKey)" :value="item" />
 							<MosaicsField v-else-if="isMosaics(itemKey)" :value="item" />
 							<TransactionType v-else-if="isTransactionType(itemKey)" :value="item" />
+							<MosaicLogo v-else-if="isMosaicLogo(itemKey)" :value="item" />
 							<BlockHeightWithFinalizedStatusField v-else-if="isBlockHeightWithFinalizedStatus(itemKey)" :value="item" />
 							<RestrictionField v-else-if="itemKey === 'restrictions'" :value="item" />
 							<RewardPrograms v-else-if="itemKey === 'rewardPrograms'" :value="item" />
@@ -99,6 +100,7 @@ import AggregateTransaction from '@/components/AggregateTransaction.vue';
 import Pagination from '@/components/controls/Pagination.vue';
 import MosaicsField from '@/components/fields/MosaicsField.vue';
 import TransactionType from '@/components/fields/TransactionType.vue';
+import MosaicLogo from '@/components/fields/MosaicLogo.vue';
 import ArrayField from '@/components/fields/ArrayField.vue';
 import RestrictionField from '@/components/fields/RestrictionField.vue';
 import Loading from '@/components/Loading.vue';
@@ -117,6 +119,7 @@ export default {
 		Pagination,
 		MosaicsField,
 		TransactionType,
+		MosaicLogo,
 		ArrayField,
 		BlockHeightWithFinalizedStatusField,
 		RestrictionField,
