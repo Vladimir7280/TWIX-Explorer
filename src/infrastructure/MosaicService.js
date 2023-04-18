@@ -18,7 +18,7 @@
 
 import http from './http';
 import helper from '../helper';
-import { Address, MosaicId, Order, ReceiptType, UInt64 } from 'twix-sdk';
+import { Address, MosaicId, Order, ReceiptType, UInt64, KeyGenerator } from 'twix-sdk';
 import { NamespaceService, MetadataService, ReceiptService } from '../infrastructure';
 import { Constants } from '../config';
 import defaultConfig from '../config/default.json'
@@ -211,19 +211,12 @@ class MosaicService {
 	const mosaicId = await helper.hexOrNamespaceToId(hexOrNamespace, 'mosaic');
 
 	const searchCriteria = {
-//		scopedMetadataKey: defaultConfig.metadataSchema.tokenIconImage,
 		targetId: mosaicId,
 	};
 
 	const mosaicMetadataDetail = await MetadataService.searchMetadatas(searchCriteria);
 
-	const filteredMosaicMetadataDetail = mosaicMetadataDetail.data.filter(function(select) { //change filter and/or select method. Or change default config structure !!!
-		return select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenWebsiteURL ||
-		select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenMailTo ||
-		select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenTwitter ||
-		select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenTelegram ||
-		select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenDiscord;
-	})
+	const filteredMosaicMetadataDetail = mosaicMetadataDetail.data.filter(({ scopedMetadataKey: id1 }) => defaultConfig.metadataSchema.tokenDetails.some(element => KeyGenerator.generateUInt64Key(element).toHex() === id1));
 
 	return filteredMosaicMetadataDetail;
 }

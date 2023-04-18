@@ -27,12 +27,12 @@
 	},
 	"metadataSchema": {
 		"tokenIconImage": "9271ACDBD57BCE79",
-		"tokenDetails": {
-			"tokenWebsiteURL": "BFC84FE97F2B6EC8",
-			"tokenMailTo": "F267A671DFACCD18",
-			"tokenTwitter": "9D89F16D56D668FA",
-			"tokenTelegram": "D2D782150E1A7FB2",
-			"tokenDiscord": "CC72DA23CEC1DBD7"
-		}
+		"tokenDetails": [
+			"tokenWebsiteURL",
+			"tokenMailTo",
+			"tokenTwitter",
+			"tokenTelegram",
+			"tokenDiscord"
+		]
 	}
 }

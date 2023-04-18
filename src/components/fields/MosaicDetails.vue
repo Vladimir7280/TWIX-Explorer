@@ -13,7 +13,8 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts">
+import { KeyGenerator } from 'twix-sdk';
 import IconTWIX from '../../styles/img/logo_32.png';
 import tokenWebsiteURL from '../../styles/img/www-icon.svg';
 import tokenMailTo from '../../styles/img/email-icon.svg';
@@ -31,27 +32,25 @@ export default {
 	},
 	computed: {
 		tokenDetails(){
-
 		},
 		iconUrl() {
 			const tokenInfo =[];
-			Object.keys(defaultConfig.metadataSchema.tokenDetails).forEach(key => {
-				const searchKey = defaultConfig.metadataSchema.tokenDetails[key];
-				const foundKey = this.value.findIndex(element => element.scopedMetadataKey === searchKey);
-				if(foundKey > -1){
-					if(key === 'tokenWebsiteURL') {
+			defaultConfig.metadataSchema.tokenDetails.forEach(el => {
+				let foundKey = this.value.findIndex(element => element.scopedMetadataKey === KeyGenerator.generateUInt64Key(el).toHex())
+    			if( foundKey > -1) {
+					if(el === 'tokenWebsiteURL') {
 						if(this.value[foundKey].value.startsWith("https://")) tokenInfo.push({icon: tokenWebsiteURL, link: this.value[foundKey].value});
 					}
-					if(key === 'tokenMailTo') {
+					if(el === 'tokenMailTo') {
 						if(this.value[foundKey].value.startsWith("mailto:")) tokenInfo.push({icon: tokenMailTo, link: this.value[foundKey].value});
 					}
-					if(key === 'tokenTwitter') {
+					if(el === 'tokenTwitter') {
 						if(this.value[foundKey].value.startsWith("https://twitter.com/")) tokenInfo.push({icon: tokenTwitter, link: this.value[foundKey].value});
 					}
-					if(key === 'tokenTelegram') {
+					if(el === 'tokenTelegram') {
 						if(this.value[foundKey].value.startsWith("https://t.me/")) tokenInfo.push({icon: tokenTelegram, link: this.value[foundKey].value});
 					}
-					if(key === 'tokenDiscord') {
+					if(el === 'tokenDiscord') {
 						if(this.value[foundKey].value.startsWith("https://discord.gg/")) tokenInfo.push({icon: tokenDiscord, link: this.value[foundKey].value});
 					}
 				}
