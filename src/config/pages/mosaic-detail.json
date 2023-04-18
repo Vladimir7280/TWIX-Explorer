@@ -21,6 +21,7 @@
                     "mosaicId",
                     "mosaicLogo",
                     "mosaicAliasNames",
+                    "mosaicDetails",
                     "divisibility",
                     "address",
                     "supply",
