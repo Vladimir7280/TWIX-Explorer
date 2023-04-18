@@ -89,7 +89,8 @@ export default {
 			],
 			disableClickValues: [
 				...Object.values(Constants.Message),
-				'mosaicLogo'
+				'mosaicLogo',
+				'mosaicDetails'
 			],
 			changeDecimalColor: [
 				'amount',
@@ -177,6 +178,10 @@ export default {
 
 		isMosaicLogo(itemKey) {
 			return itemKey === 'mosaicLogo';
+		},
+
+		isMosaicDetails(itemKey) {
+			return itemKey === 'mosaicDetails';
 		},
 
 		isBlockHeightWithFinalizedStatus(itemKey) {

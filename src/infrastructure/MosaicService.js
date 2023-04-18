@@ -95,11 +95,14 @@ class MosaicService {
 
 	const mosaicLogo = await this.getMosaicMetadataLogo(mosaicId.toHex());
 
+	const mosaicDetails = await this.getMosaicMetadataDetails(mosaicId.toHex());
+
 	   return {
 		   ...mosaicInfo,
 		   mosaicAliasNames: this.extractMosaicNamespace(mosaicInfo, mosaicNames),
 		   expiredInBlock: expiredInBlock === mosaicInfo.startHeight ? Constants.Message.INFINITY : expiredInBlock,
-		   mosaicLogo: mosaicLogo
+		   mosaicLogo: mosaicLogo,
+		   mosaicDetails: mosaicDetails
 	   };
    }
 
@@ -197,6 +200,32 @@ class MosaicService {
 		mosaicLogo: mosaicMetadataLogo.data.length? mosaicMetadataLogo.data[0].value : 'N/A'
 	}
 	return mosaicMetadataLogos;
+}
+
+   /**
+   * Gets mosaic Metadata Details dataset into Vue component
+   * @param hexOrNamespace - hex value or namespace name
+   * @returns formatted mosaic Metadata Details
+   */
+   static getMosaicMetadataDetails = async (hexOrNamespace) => {
+	const mosaicId = await helper.hexOrNamespaceToId(hexOrNamespace, 'mosaic');
+
+	const searchCriteria = {
+//		scopedMetadataKey: defaultConfig.metadataSchema.tokenIconImage,
+		targetId: mosaicId,
+	};
+
+	const mosaicMetadataDetail = await MetadataService.searchMetadatas(searchCriteria);
+
+	const filteredMosaicMetadataDetail = mosaicMetadataDetail.data.filter(function(select) { //change filter and/or select method. Or change default config structure !!!
+		return select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenWebsiteURL ||
+		select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenMailTo ||
+		select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenTwitter ||
+		select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenTelegram ||
+		select.scopedMetadataKey == defaultConfig.metadataSchema.tokenDetails.tokenDiscord;
+	})
+
+	return filteredMosaicMetadataDetail;
 }
 
    /**

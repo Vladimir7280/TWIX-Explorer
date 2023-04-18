@@ -15,7 +15,8 @@
 						<MosaicsField v-else-if="itemKey === 'mosaics'" :value="item" />
 						<Decimal v-else-if="isDecimal(itemKey)" :value="item" />
 						<TransactionType v-else-if="isTransactionType(itemKey)" :value="item" />
-						<MosaicLogo v-else-if="isMosaicLogo(itemKey)" :value="item" :src="item"/>
+						<MosaicLogo v-else-if="isMosaicLogo(itemKey)" :value="item"/>
+						<MosaicDetails v-else-if="isMosaicDetails(itemKey)" :value="item"/>
 						<BlockHeightWithFinalizedStatusField v-else-if="isBlockHeightWithFinalizedStatus(itemKey)" :value="item" />
 						<Boolean v-else-if="isBoolean(itemKey)" :value="item" style="transform: scale(0.7, 0.7);"/>
 						<Age v-else-if="isAge(itemKey)" :date="item" />
@@ -41,6 +42,7 @@ import MosaicsField from '@/components/fields/MosaicsField.vue';
 import ArrayField from '@/components/fields/ArrayField.vue';
 import TransactionType from '@/components/fields/TransactionType.vue';
 import MosaicLogo from '@/components/fields/MosaicLogo.vue';
+import MosaicDetails from '@/components/fields/MosaicDetails.vue';
 import BlockHeightWithFinalizedStatusField from '@/components/fields/BlockHeightWithFinalizedStatusField.vue';
 import MessageField from '@/components/fields/MessageField.vue';
 
@@ -52,6 +54,7 @@ export default {
 		ArrayField,
 		TransactionType,
 		MosaicLogo,
+		MosaicDetails,
 		BlockHeightWithFinalizedStatusField,
 		MessageField
 	},

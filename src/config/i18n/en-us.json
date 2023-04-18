@@ -394,5 +394,6 @@
   "nodeCountChartTitle": "Node count over time",
   "softwareVersion": "Version",
   "isHttpsEnabled": "Https",
-  "restVersion": "REST Version"
+  "restVersion": "REST Version",
+  "mosaicDetails": "Info"
 }
